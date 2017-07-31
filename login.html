@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CRM Site</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400' rel='stylesheet' type='text/css'>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/loaders.css"/>
+
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#btn-log").click(function() {
+                $('.loader-holder').show();
+            });
+
+            // $('#checky').click(function(){
+            //     if($(this).attr('checked') == false){
+            //          $('#btn-create').attr("disabled","disabled");               
+            //     }
+            //     else {
+            //         $('#btn-create').removeAttr('disabled');
+            //         $('#btn-create').removeClass("btn-sign");
+            //     }
+            // });
+        });
+    </script>
+    
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">LOGO here</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navi">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">FEATURES</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">PLANS AND PRICING</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">SUPPORT</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ryt">
+                    <li><button class="btn-free">Free Trial</button></li>
+                    <li><button class="btn-login">Login</button></li>
+                    <li class="wide-search">
+                        <i id="show-txtsearch" class="fa fa-search btnsearch"></i>
+                        <div class="txtsearch-holder">
+                            <input type="text" class="txtsearch" placeholder="Search..."/>
+                        </div>
+                    </li>
+                    <li class="small-search-holder">
+                        <div class="form-group smsearch">
+                            <div class="input-group">
+                                <input type="text" class="form-control smstxtsearch" id="" placeholder="Search...">
+                                <div class="input-group-addon addsms"><i class="fa fa-search"></i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- banner -->
+    <div class="login-banner-holder">
+        <div class="container">
+            <div class="login-holder">
+                <div class="row">
+                    <div class="col-md-5 col-centered signup-panel-holder">
+                        <div class="panel panel-sign">
+                            <div class="panel-heading">LOG <span>IN</span></div>
+                            <div class="panel-body">
+                                <div class="alert alert-danger" role="alert">
+                                    <i class="fa fa-info-circle alert-icon"></i> Error.
+                                </div>
+
+                                <form class="frm-singup">
+                                    <div class="form-group signup-frm-group">
+                                        <input type="text" class="form-control txt-sign txt-login" id="" placeholder="Username">
+                                    </div>
+                                    <div class="form-group signup-frm-group">
+                                        <input type="password" class="form-control txt-sign txt-login" id="" placeholder="Password">
+                                    </div>
+                                </form>
+                                <div class="row action-holder">
+                                    <div class="col-sm-6 forgot-holder">
+                                        <a href="#" class="forgot" data-toggle="modal" data-target="#retrievePass">Forgot Password?</a>
+                                    </div>
+                                    <div class="col-sm-6 btn-login-holder">
+                                        <button class="btn-log" id="btn-log">LOG IN</button>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="not-reg-holder">
+                                            <p>Don’t have an account? <a href="#">Sign up here!</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end banner -->
+
+    <!-- upper footer -->
+    <div class="upper-footer-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-building-o"></i> OUR COMPANY</h1>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-sitemap"></i> FEATURES</h1>
+                        <ul>
+                            <li><a href="#">Sales Tracker</a></li>
+                            <li><a href="#">Report Customizer</a></li>
+                            <li><a href="#">Contact Connect</a></li>
+                            <li><a href="#">Document Library</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-folder-open"></i> RESOURCES</h1>
+                        <ul>
+                            <li><a href="#">Plans and Pricing</a></li>
+                            <li><a href="#">How Does CRMPP Work</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-phone"></i> SUPPORT</h1>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="border-top: 1px solid #ccc"></div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="terms-policy-holder">
+                        <ul>
+                            <li><a href="">TERMS OF SERVICE</a></li>
+                            <li>-</li>
+                            <li><a href="">PRIVACY POLICY</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="connect-holder">
+                        <ul>
+                            <li><a href="#"><p class="fb"></p></a></li>
+                            <li><a href="#"><p class="insta"></p></a></li>
+                            <li><a href="#"><p class="twit"></p></a></li>
+                            <li><a href="#"><p class="gplus"></p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end upper footer -->
+
+    <!-- end footer -->
+    <div class="footer-holder">
+        <div class="container">
+            <div class="copy-holder">
+                <p>&copy; CRMPP. All Rights Reserved.</p>
+            </div>
+        <div>
+    </div>
+
+    <div id="loader-holder" class="loader-holder">
+        <div class="loader">
+            <div class="loader-inner ball-pulse">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="retrievePass">
+        <div class="modal-dialog pop-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title pop-title">RETRIEVE PASSWORD</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group signup-frm-group">
+                            <input type="text" class="form-control txt-sign txt-login" id="" placeholder="Enter you Email">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-pop">Retrieve Password</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <a href="#0" class="cd-top">Top</a>
+    <!-- end footer -->
+
+    <!-- jQuery -->
+    <script src="js/main.js"></script>
+    <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+    </script>
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    
+</body>
+
+</html>
