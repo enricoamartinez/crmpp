@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CRM Site</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300,600,400' rel='stylesheet' type='text/css'>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/uisearch.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#mw").click(function(){
+                $("#mw").addClass("tab-act");
+                $("#mp").removeClass("tab-act");
+                $("#asp").removeClass("tab-act");
+                $("#swc").removeClass("tab-act");
+                $("#gm").removeClass("tab-act");
+                $("#mw1").addClass("tab-act");
+                $("#mp1").removeClass("tab-act");
+                $("#asp1").removeClass("tab-act");
+                $("#swc1").removeClass("tab-act");
+                $("#gm1").removeClass("tab-act");
+            });
+            $("#mp").click(function(){
+                $("#mw").removeClass("tab-act");
+                $("#mp").addClass("tab-act");
+                $("#asp").removeClass("tab-act");
+                $("#swc").removeClass("tab-act");
+                $("#gm").removeClass("tab-act");
+                $("#mw1").removeClass("tab-act");
+                $("#mp1").addClass("tab-act");
+                $("#asp1").removeClass("tab-act");
+                $("#swc1").removeClass("tab-act");
+                $("#gm1").removeClass("tab-act");
+            });
+            $("#asp").click(function(){
+                $("#mw").removeClass("tab-act");
+                $("#mp").removeClass("tab-act");
+                $("#asp").addClass("tab-act");
+                $("#swc").removeClass("tab-act");
+                $("#gm").removeClass("tab-act");
+                $("#mw1").removeClass("tab-act");
+                $("#mp1").removeClass("tab-act");
+                $("#asp1").addClass("tab-act");
+                $("#swc1").removeClass("tab-act");
+                $("#gm1").removeClass("tab-act");
+            });
+            $("#swc").click(function(){
+                $("#mw").removeClass("tab-act");
+                $("#mp").removeClass("tab-act");
+                $("#asp").removeClass("tab-act");
+                $("#swc").addClass("tab-act");
+                $("#gm").removeClass("tab-act");
+                $("#mw1").removeClass("tab-act");
+                $("#mp1").removeClass("tab-act");
+                $("#asp1").removeClass("tab-act");
+                $("#swc1").addClass("tab-act");
+                $("#gm1").removeClass("tab-act");
+            });
+            $("#gm").click(function(){
+                $("#mw").removeClass("tab-act");
+                $("#mp").removeClass("tab-act");
+                $("#asp").removeClass("tab-act");
+                $("#swc").removeClass("tab-act");
+                $("#gm").addClass("tab-act");
+                $("#mw1").removeClass("tab-act");
+                $("#mp1").removeClass("tab-act");
+                $("#asp1").removeClass("tab-act");
+                $("#swc1").removeClass("tab-act");
+                $("#gm1").addClass("tab-act");
+            });
+            $("#show-txtsearch").click(function(){
+                $(".txtsearch").toggle("fast");
+                $(this).addClass("bsfocus");
+            });
+        });
+    </script>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">LOGO here</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navi">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">ABOUT</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">FEATURES</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">PLANS AND PRICING</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">SUPPORT</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ryt">
+                    <li><button class="btn-free">Free Trial</button></li>
+                    <li><button class="btn-login" data-toggle="modal" data-target="#login">Login</button></li>
+                    <li class="wide-search">
+                        <i id="show-txtsearch" class="fa fa-search btnsearch"></i>
+                        <div class="txtsearch-holder">
+                            <input type="text" class="txtsearch" placeholder="Search..."/>
+                        </div>
+                    </li>
+                    <li class="small-search-holder">
+                        <div class="form-group smsearch">
+                            <div class="input-group">
+                                <input type="text" class="form-control smstxtsearch" id="" placeholder="Search...">
+                                <div class="input-group-addon addsms"><i class="fa fa-search"></i></div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- banner -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner" role="listbox">
+            <div class="item item1 active">
+                <div class="container">
+                    <div class="row carousel-cap">
+                        <div class="col-lg-8">
+                            <h1>Increase Sales</h1>
+                             <p>
+                                Win more customers by closing more deals quicker<br> and bolstering productivity.
+                             </p>
+                             <div class="btn-holder">
+                                <a href="#">Try a demo account</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="container">
+                    <div class="row carousel-cap">
+                        <div class="col-lg-8">
+                            <h1>Manage Manpower</h1>
+                             <p>
+                                Streamline your business at your fingertips using<br> CRMPP's easy-to-use software
+                             </p>
+                             <div class="btn-holder">
+                                <a href="#">Try a demo account</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item item3">
+                <div class="container">
+                    <div class="row carousel-cap">
+                        <div class="col-lg-8">
+                            <h1>Go Social</h1>
+                             <p>
+                                Link CRMPP with your social media to communicate with<br> your most valuable assets – clients and partners.
+                             </p>
+                             <div class="btn-holder">
+                                <a href="#">Try a demo account</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end banner -->
+
+    <!-- content -->
+    <div class="content-holder">
+        <div class="container">
+            <div class="tab-holder">
+                <div class="tabs">
+                    <ul>
+                        <li class="mob-holder">
+                            <a href="#mob" aria-controls="mob" role="tab" data-toggle="tab" class="mob a tab-act" id="mw"><i class="fa fa-slideshare icons tab-act" id="mw1"></i> Mobilize Workforce</a>
+                        </li>
+                        <li class="mar-holder">
+                            <a href="#mar" aria-controls="mar" role="tab" data-toggle="tab" id="mp" class=""><i class="fa fa-bullhorn icons" id="mp1"></i> Market Products</a>
+                        </li>
+                        <li class="acc-holder">
+                            <a href="#acc" aria-controls="acc" role="tab" data-toggle="tab" id="asp" class=""><i class="fa fa-line-chart icons" id="asp1"></i> Accelerate Sales Productivity</a>
+                        </li>
+                        <li class="soc-holder">
+                            <a href="#soc" aria-controls="soc" role="tab" data-toggle="tab" id="swc" class=""><i class="fa fa-comments icons" id="swc1"></i> Socialize with Customers</a>
+                        </li>
+                        <li class="go-holder">
+                            <a href="#go" aria-controls="go" role="tab" data-toggle="tab" id="gm" class=""><i class="fa fa-mobile icons" id="gm1"></i> Go Mobile</a>
+                        </li>
+                    </ul>
+                </div><div class="clearfix"></div>
+                <div class="sm-tabs">
+                    <ul>
+                        <li>
+                            <a href="#mob" aria-controls="mob" role="tab" data-toggle="tab" class="mob">
+                                <i class="fa fa-slideshare icons"></i> Mobilize Workforce
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mar" aria-controls="mar" role="tab" data-toggle="tab" id="mp" class="">
+                                <i class="fa fa-bullhorn icons" id="mp1"></i> Market Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#acc" aria-controls="acc" role="tab" data-toggle="tab" id="asp" class="">
+                                <i class="fa fa-line-chart icons" id="asp1"></i> Accelerate Sales Productivity
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#soc" aria-controls="soc" role="tab" data-toggle="tab" id="swc" class="">
+                                <i class="fa fa-comments icons" id="swc1"></i> Socialize with Customers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#go" aria-controls="go" role="tab" data-toggle="tab" id="gm" class="">
+                                <i class="fa fa-mobile icons" id="gm1"></i> Go Mobile
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content tab-cont">
+                    <div role="tabpanel" class="tab-pane active" id="mob">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 tab-img">
+                                <img src="images/mob.jpg" class="img-responsive"/>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="tabs-text">
+                                    <h1><i class="fa fa-slideshare icons2"></i> Mobilize Workforce</h1>
+                                    <p>
+                                        Make everyone a team player. Operate your daily business activities by managing projects, delegating tasks, and organizing clients, suppliers, and affiliates using our software.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="mar">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 tab-img">
+                                <img src="images/mar.jpg" class="img-responsive"/>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="tabs-text">
+                                    <h1><i class="fa fa-bullhorn icons2"></i> Market Products</h1>
+                                    <p>
+                                        Stay on top of the game. Make your organization known throughout all digital avenues by creating exceptional marketing strategies using CRMPP.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="acc">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 tab-img">
+                                <img src="images/acc.jpg" class="img-responsive"/>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="tabs-text">
+                                    <h1><i class="fa fa-line-chart icons2"></i> Accelerate Sales Productivity</h1>
+                                    <p>
+                                        Cultivate competition in the industry. Reach your sales goals by closing more transactions with minimal efforts. CRMPP is user-friendly and no technical glitch can interfere with your business.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="soc">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 tab-img">
+                                <img src="images/soc.jpg" class="img-responsive"/>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="tabs-text">
+                                    <h1><i class="fa fa-comments icons2"></i> Socialize with Customers</h1>
+                                    <p>
+                                        Integrate your social media accounts with CRMPP to interact with your clients and keep abreast of the latest trends on the Internet.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="go">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 tab-img">
+                                <img src="images/go.jpg" class="img-responsive"/>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="tabs-text">
+                                    <h1><i class="fa fa-mobile icons2"></i> Go Mobile</h1>
+                                    <p>
+                                        Always on the go? No problem! Access CRMPP from your smartphone or tablet anytime, anywhere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+
+    <!-- content2 -->
+    <div class="content2-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9">
+                    <div class="content2">
+                        <h1>What makes CRM Name right for you?</h1>
+                        <p>
+                            CRMPP is the new face of customer service. Everything you need – from bolstering sales to managing your workforce – is in our people-focused software. We are deeply committed to breathing life to your organization and making your best interests our top priority. Through the years, our team has been passionate in improving our software to cater to the growing needs of customer relations.<br><br>
+                            Shape your business the way you want it. Be a game changer. Use CRMPP today.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="cont-img-holder">
+                        <img src="images/content2-img.png" class="img-responsive"/>
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <!-- end content2 -->
+
+    <!-- upper footer -->
+    <div class="upper-footer-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-building-o"></i> OUR COMPANY</h1>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-sitemap"></i> FEATURES</h1>
+                        <ul>
+                            <li><a href="#">Sales Tracker</a></li>
+                            <li><a href="#">Report Customizer</a></li>
+                            <li><a href="#">Contact Connect</a></li>
+                            <li><a href="#">Document Library</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-folder-open"></i> RESOURCES</h1>
+                        <ul>
+                            <li><a href="#">Plans and Pricing</a></li>
+                            <li><a href="#">How Does CRMPP Work</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                    <div class="links-holder">
+                        <h1><i class="fa fa-phone"></i> SUPPORT</h1>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="border-top: 1px solid #ccc"></div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="terms-policy-holder">
+                        <ul>
+                            <li><a href="">TERMS OF SERVICE</a></li>
+                            <li>-</li>
+                            <li><a href="">PRIVACY POLICY</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="connect-holder">
+                        <ul>
+                            <li><a href="#"><p class="fb"></p></a></li>
+                            <li><a href="#"><p class="insta"></p></a></li>
+                            <li><a href="#"><p class="twit"></p></a></li>
+                            <li><a href="#"><p class="gplus"></p></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end upper footer -->
+
+    <!-- end footer -->
+    <div class="footer-holder">
+        <div class="container">
+            <div class="copy-holder">
+                <p>&copy; CRMPP. All Rights Reserved.</p>
+            </div>
+        <div>
+    </div>
+    <a href="#0" class="cd-top">Top</a>
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body&hellip;</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- end footer -->
+
+    <!-- jQuery -->
+    <script src="js/main.js"></script>
+    <script>
+        new UISearch( document.getElementById( 'sb-search' ) );
+    </script>
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    
+</body>
+
+</html>
